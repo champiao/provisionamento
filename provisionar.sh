@@ -9,8 +9,7 @@ def menu():
     print("2- RHEL (Fedora, opensuse)")
     print("3- ARCH (Manjaro, Antergos, etc...)")
     print("4- CentOS")
-    print("5- Somente os scripts")
-    print("6- Sair")
+    print("5- Sair")
     opcao = input("\n\n: ")
     #menu de opções das ações do proggrama
     if opcao == "1":
@@ -28,7 +27,6 @@ def menu():
         os.system("sudo snap refresh")
         os.system("sudo apt install ssh")
         os.system("sudo systemctl start sshd; sudo systemctl enable sshd")
-        opcao = '5'
     if opcao == "2":
         #provisionamento via shell linux de uma distro baseada em Fedora/RHEL
         print("\n\niniciando instalações base redhat")
@@ -45,7 +43,6 @@ def menu():
         os.system("sudo dnf install ssh -y")
         os.system("sudo systemctl start sshd")
         os.system("sudo systemctl enable sshd")
-        opcao = '5'
     if opcao == "3":
         #provisionamento via shell linux de uma distro baseada em ArchLinux
         print("\n\niniciando instalacoes para base arch")
@@ -60,7 +57,6 @@ def menu():
         os.system("sudo pacman -S ssh --noconfirm")
         os.system("sudo systemctl start sshd")
         os.system("sudo systemctl enable sshd")
-        opcao = '5'
     if opcao == "4":
         #provisionamento via shell linux de uma distro baseada em RHEL/Centos
         print("\n\niniciando instalacoes para base arch")
@@ -75,15 +71,7 @@ def menu():
         os.system("sudo yum install ssh -y")
         os.system("sudo systemctl start sshd")
         os.system("sudo systemctl enable sshd")
-        opcao = '5'
     if opcao == "5":
-        #Download Scripts
-        os.system("mkdir ~/Documentos/teste")
-        os.system("git clone https://github.com/champiao/potencia.git ~/Documentos/teste/")
-        os.system("chmod 777 ~/Documentos/teste/*.sh")
-        exit()
-        menu();
-    if opcao == "6":
         #sair do programa com a opcao 6
         print("\n\nGOOD BYE:\n\n")
         exit()
